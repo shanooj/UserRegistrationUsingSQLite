@@ -35,6 +35,7 @@
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
             android:drawableLeft="@drawable/ic_person"
+            android:drawableTint="@color/colorText"
             android:drawablePadding="8dp"
             android:hint="User Name"
             android:textColor="@android:color/white" />

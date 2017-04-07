@@ -5,8 +5,8 @@ package com.karbaros.userregistrationusingsqlite;
  */
 
 public class Config {
-    private  final String EMAIL = "Shanoojpp2011@gmail.com";
-    private  final String PASSWORD = "payangadi670303";
+    private  final String EMAIL = "karbarosetech@gmail.com";
+    private  final String PASSWORD = "karbarose123";
 
     public String getPASSWORD() {
         return PASSWORD;

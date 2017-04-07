@@ -2,9 +2,6 @@ package com.karbaros.userregistrationusingsqlite;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffColorFilter;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.Snackbar;
@@ -67,16 +64,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         boolean flag2;
         if (etUserName.getText().toString().trim().equals("")) {
             flag = false;
-            Drawable mDrawable = getBaseContext().getResources().getDrawable(R.drawable.ic_person);
-            mDrawable.setColorFilter(new
-                    PorterDuffColorFilter(getBaseContext().getResources().getColor(R.color.red), PorterDuff.Mode.MULTIPLY));
+            /*Drawable drawable = getBaseContext().getResources().getDrawable(R.drawable.ic_person);
+            drawable = DrawableCompat.wrap(drawable);
+            DrawableCompat.setTint(drawable, Color.GREEN);
+            DrawableCompat.setTintMode(drawable, PorterDuff.Mode.SRC_IN);*/
+            //etUserName.setCompoundDrawablesWithIntrinsicBounds(getBaseContext().getResources().getDrawable(R.drawable.pe), null, null, null);
             tilUserName.setErrorEnabled(true);
             tilUserName.setError("Enter UserName");
         } else {
             flag = true;
-            Drawable mDrawable = getBaseContext().getResources().getDrawable(R.drawable.ic_person);
-            mDrawable.setColorFilter(new
-                    PorterDuffColorFilter(getBaseContext().getResources().getColor(R.color.colorText), PorterDuff.Mode.MULTIPLY));
+
             tilUserName.setErrorEnabled(false);
             tilUserName.setError("");
         }
@@ -84,7 +81,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (etPassword.getText().toString().trim().equals("")) {
             flag2 = false;
             tilPassword.setErrorEnabled(true);
-            tilPassword.setError("Enter UserName");
+            tilPassword.setError("Enter Password");
         } else {
             flag2 = true;
             tilPassword.setErrorEnabled(false);
